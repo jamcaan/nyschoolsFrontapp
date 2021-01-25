@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>School Details</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/tabs/tab1" text="back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let s of schoolIds">
+    <h2>{{s.school_name}}</h2>
+    <ion-item >
+     <ion-label>Number SAT takers:  {{s.num_of_sat_test_takers}}</ion-label>
+
+
+    </ion-item>
+    <ion-item>
+      <ion-label>Critical Reading Avarage:  {{s.sat_critical_reading_avg_score}}</ion-label>
+
+    </ion-item>
+    <ion-item>
+      <ion-label>Math Average Score:  {{s.sat_math_avg_score}}</ion-label>
+
+    </ion-item>
+    <ion-item>
+      <ion-label>Writing Avarage Score:  {{s.sat_writing_avg_score}}</ion-label>
+
+    </ion-item>
+
+    
+  </ion-card>   
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar  color = "primary">
+    <ion-title>List of NY Schools</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-grid>
+      <ion-row *ngFor="let ny of nyschoolsList">
+        <ion-item-sliding>
+
+          <ion-item> {{ny.school_name}} </ion-item>
+          //slide left to view the details of the current record
+          <ion-item-options side="end">
+            <ion-button (click)="getItem(ny)">view</ion-button>
+
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-content>
